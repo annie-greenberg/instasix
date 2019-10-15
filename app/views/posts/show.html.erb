@@ -1,0 +1,32 @@
+<div class="posts-wrapper row">
+  <div class="post">
+    <% if @post.user == current_user %>
+    <% if @post.user == current_user %>
+    <div class="text-center edit-links">
+      <%= link_to "← Volver", posts_path %>
+      |
+      <%= link_to "Edit post", edit_post_path(@post) %>
+    </div>
+  <% else %>
+    <div class="text-center edit-links">
+      <%= link_to "← Volver", posts_path %>
+    </div>
+  <% end  %>
+  <% else %>
+    <div class="text-center edit-links">
+      <%= link_to "← Volver", posts_path %>
+    </div>
+  <% end  %>
+    <div class="image center-block">
+      <%= image_tag(@post.image, height: 200) if @post.image.attached?%>
+    </div>
+    <div class="post-head">
+      <div class="name">
+    <%= @post.user.name if @post.user %>
+      </div>
+    </div>
+    <p class="description">
+      <%= @post.description %>
+    </p>
+  </div>
+</div>
