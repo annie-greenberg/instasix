@@ -1,12 +1,10 @@
 <% if user_signed_in? %>
   <div class="main-wrapper">
-    <div class="row">
+    <div class="organize">
       <% @posts.each do |post| %>
-        <div class="col-sm-4">
           <div class="image center-block">
-            <%= link_to image_tag(post.image, class:'img-responsive'), post_path(post) %>
+            <%= link_to image_tag(post.image, class:'images img-responsive'), post_path(post) %><br>
           </div>
-        </div>
       <% end %>
     </div>
   </div>

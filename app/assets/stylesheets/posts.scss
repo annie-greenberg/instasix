@@ -1,3 +1,18 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.images {
+  width: 600px;
+  height: 400px;
+  margin-left: 80px;
+  margin-right: 80px;
+  image-orientation: 270deg;
+  display: block;
+}
+
+.organize {
+  display: block;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 50%;
+}
